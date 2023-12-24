@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+body.recording {
+  pointer-events: none;
+}
+body.recording::before {
+  content: "📹 recording…";
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: inline-block;
+  width: 15ch;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  white-space: nowrap;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1em;
+  border-radius: 50vh;
+  font-size: 2vw;
+}
+body.recording canvas {
+  opacity: 0.66;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+.dg li.title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 30px;
+  height: 30px;
+  margin-left: -7px;
+}
+
+.dg .cr.function .property-name {
+  width: 100%;
+}
